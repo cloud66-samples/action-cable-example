@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: chatty_production
-  username: chatty
-  password: <%= ENV['CHATTY_DATABASE_PASSWORD'] %>
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  database: <%= ENV['POSTGRES_DATABASE'] %>
+  host: <%= ENV['POSTGRESQL_ADDRESS'] %>
